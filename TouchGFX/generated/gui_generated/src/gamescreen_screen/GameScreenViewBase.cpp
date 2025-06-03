@@ -18,6 +18,15 @@ GameScreenViewBase::GameScreenViewBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box1);
 
+    line1_2.setPosition(85, 300, 70, 10);
+    line1_2Painter.setColor(touchgfx::Color::getColorFromRGB(62, 235, 35));
+    line1_2.setPainter(line1_2Painter);
+    line1_2.setStart(5, 5);
+    line1_2.setEnd(65, 5);
+    line1_2.setLineWidth(10);
+    line1_2.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    add(line1_2);
+
     line1_1.setPosition(85, 10, 70, 10);
     line1_1Painter.setColor(touchgfx::Color::getColorFromRGB(242, 15, 15));
     line1_1.setPainter(line1_1Painter);
@@ -62,15 +71,6 @@ GameScreenViewBase::GameScreenViewBase()
     circle1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle1.setPainter(circle1Painter);
     add(circle1);
-
-    line1.setPosition(85, 300, 70, 10);
-    line1Painter.setColor(touchgfx::Color::getColorFromRGB(62, 235, 35));
-    line1.setPainter(line1Painter);
-    line1.setStart(5, 5);
-    line1.setEnd(65, 5);
-    line1.setLineWidth(10);
-    line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-    add(line1);
 }
 
 GameScreenViewBase::~GameScreenViewBase()

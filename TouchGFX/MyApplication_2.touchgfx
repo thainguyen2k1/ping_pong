@@ -13,6 +13,25 @@
           },
           {
             "Type": "Line",
+            "Name": "line1_2",
+            "X": 85,
+            "Y": 300,
+            "Width": 70,
+            "Height": 10,
+            "Color": {
+              "Red": 62,
+              "Green": 235,
+              "Blue": 35
+            },
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 65.0,
+            "EndY": 5.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
             "Name": "line1_1",
             "X": 85,
             "Y": 10,
@@ -103,25 +122,6 @@
             "Radius": 10.0,
             "EndAngle": 360.0,
             "CapPrecision": "Butt"
-          },
-          {
-            "Type": "Line",
-            "Name": "line1",
-            "X": 85,
-            "Y": 300,
-            "Width": 70,
-            "Height": 10,
-            "Color": {
-              "Red": 62,
-              "Green": 235,
-              "Blue": 35
-            },
-            "StartX": 5.0,
-            "StartY": 5.0,
-            "EndX": 65.0,
-            "EndY": 5.0,
-            "LineWidth": 10.0,
-            "LineEndingStyle": "Round"
           }
         ],
         "Interactions": [

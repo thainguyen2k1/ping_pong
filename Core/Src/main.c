@@ -94,8 +94,10 @@ const osThreadAttr_t GUI_Task_attributes = {
 /* USER CODE BEGIN PV */
 uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above */
 typedef struct {
-    uint16_t x;
-    uint16_t y;
+    uint16_t x1;
+    uint16_t y1;
+    uint16_t x2;
+    uint16_t y2;
 } JoystickData;
 
 osMessageQueueId_t joystickQueueHandle;
@@ -1108,12 +1110,14 @@ void StartDefaultTask(void *argument)
 	        // Đọc ADC giá trị joystick
 	        HAL_ADC_Start(&hadc1);
 	        HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
-	        data.x = HAL_ADC_GetValue(&hadc1);
+	        data.x1 = HAL_ADC_GetValue(&hadc1);
 	        HAL_ADC_Stop(&hadc1);
+
+	        osDelay(1);
 
 	        HAL_ADC_Start(&hadc2);
 	        HAL_ADC_PollForConversion(&hadc2, HAL_MAX_DELAY);
-	        data.y = HAL_ADC_GetValue(&hadc2);
+	        data.x2 = HAL_ADC_GetValue(&hadc2);
 	        HAL_ADC_Stop(&hadc2);
 
 	        // Gửi vào queue

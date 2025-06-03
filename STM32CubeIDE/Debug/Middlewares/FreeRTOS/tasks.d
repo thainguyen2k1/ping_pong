@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/tasks.o: \
- C:/TouchGFXProjects/MyApplication_2/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+ C:/TouchGFXProjects/ping_pong/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
