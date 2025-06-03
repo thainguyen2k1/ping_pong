@@ -40,6 +40,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
+    touchgfx::Line line1_2;
+    touchgfx::PainterRGB565 line1_2Painter;
     touchgfx::Line line1_1;
     touchgfx::PainterRGB565 line1_1Painter;
     touchgfx::TextArea textArea1;
@@ -47,8 +49,6 @@ protected:
     touchgfx::TextAreaWithOneWildcard textArea2_1;
     touchgfx::Circle circle1;
     touchgfx::PainterRGB565 circle1Painter;
-    touchgfx::Line line1;
-    touchgfx::PainterRGB565 line1Painter;
 
     /*
      * Wildcard Buffers

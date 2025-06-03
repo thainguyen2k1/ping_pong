@@ -1,5 +1,5 @@
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:GameScreenPresenter::~GameScreenPresenter()	1
-C:/TouchGFXProjects/MyApplication_2/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:10:6:virtual void GameScreenPresenter::activate()	1
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:10:6:virtual void GameScreenPresenter::activate()	1
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:virtual GameScreenPresenter::~GameScreenPresenter()	1
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:virtual void* GameScreenPresenter::_ZThn4_N19GameScreenPresenterD1Ev()	1
-C:/TouchGFXProjects/MyApplication_2/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:4:1:GameScreenPresenter::GameScreenPresenter(GameScreenView&)	1
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:4:1:GameScreenPresenter::GameScreenPresenter(GameScreenView&)	1

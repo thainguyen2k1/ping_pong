@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
- C:/TouchGFXProjects/MyApplication_2/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
+ C:/TouchGFXProjects/ping_pong/TouchGFX/target/generated/TouchGFXGeneratedHAL.cpp \
  ../../TouchGFX/target/generated/TouchGFXGeneratedHAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \

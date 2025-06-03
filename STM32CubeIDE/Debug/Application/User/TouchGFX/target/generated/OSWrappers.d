@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/generated/OSWrappers.o: \
- C:/TouchGFXProjects/MyApplication_2/TouchGFX/target/generated/OSWrappers.cpp \
+ C:/TouchGFXProjects/ping_pong/TouchGFX/target/generated/OSWrappers.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
