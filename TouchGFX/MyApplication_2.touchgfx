@@ -14,18 +14,19 @@
           {
             "Type": "Line",
             "Name": "line1_1",
-            "X": 70,
-            "Width": 100,
-            "Height": 50,
+            "X": 85,
+            "Y": 10,
+            "Width": 70,
+            "Height": 10,
             "Color": {
               "Red": 242,
               "Green": 15,
               "Blue": 15
             },
-            "StartX": 15.0,
-            "StartY": 25.0,
-            "EndX": 85.0,
-            "EndY": 25.0,
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 65.0,
+            "EndY": 5.0,
             "LineWidth": 10.0,
             "LineEndingStyle": "Round"
           },
@@ -86,25 +87,6 @@
             }
           },
           {
-            "Type": "Line",
-            "Name": "line1",
-            "X": 70,
-            "Y": 270,
-            "Width": 100,
-            "Height": 50,
-            "Color": {
-              "Red": 32,
-              "Green": 252,
-              "Blue": 8
-            },
-            "StartX": 15.0,
-            "StartY": 25.0,
-            "EndX": 85.0,
-            "EndY": 25.0,
-            "LineWidth": 10.0,
-            "LineEndingStyle": "Round"
-          },
-          {
             "Type": "Circle",
             "Name": "circle1",
             "X": 109,
@@ -121,9 +103,40 @@
             "Radius": 10.0,
             "EndAngle": 360.0,
             "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 85,
+            "Y": 300,
+            "Width": 70,
+            "Height": 10,
+            "Color": {
+              "Red": 62,
+              "Green": 235,
+              "Blue": 35
+            },
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 65.0,
+            "EndY": 5.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Round"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "handleTick"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

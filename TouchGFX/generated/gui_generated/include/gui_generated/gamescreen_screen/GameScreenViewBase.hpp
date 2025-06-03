@@ -20,6 +20,15 @@ public:
     GameScreenViewBase();
     virtual ~GameScreenViewBase();
     virtual void setupScreen();
+    virtual void handleTickEvent();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void handleTick()
+    {
+        // Override and implement this function in GameScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -36,10 +45,10 @@ protected:
     touchgfx::TextArea textArea1;
     touchgfx::TextAreaWithOneWildcard textArea2;
     touchgfx::TextAreaWithOneWildcard textArea2_1;
-    touchgfx::Line line1;
-    touchgfx::PainterRGB565 line1Painter;
     touchgfx::Circle circle1;
     touchgfx::PainterRGB565 circle1Painter;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB565 line1Painter;
 
     /*
      * Wildcard Buffers

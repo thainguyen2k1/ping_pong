@@ -11,7 +11,11 @@ public:
     virtual ~GameScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void handleTick();
+
 protected:
+    uint32_t tickCount;
+
 };
 
 #endif // GAMESCREENVIEW_HPP

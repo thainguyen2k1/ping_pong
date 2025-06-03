@@ -18,11 +18,11 @@ GameScreenViewBase::GameScreenViewBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box1);
 
-    line1_1.setPosition(70, 0, 100, 50);
+    line1_1.setPosition(85, 10, 70, 10);
     line1_1Painter.setColor(touchgfx::Color::getColorFromRGB(242, 15, 15));
     line1_1.setPainter(line1_1Painter);
-    line1_1.setStart(15, 25);
-    line1_1.setEnd(85, 25);
+    line1_1.setStart(5, 5);
+    line1_1.setEnd(65, 5);
     line1_1.setLineWidth(10);
     line1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line1_1);
@@ -54,15 +54,6 @@ GameScreenViewBase::GameScreenViewBase()
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NC1J));
     add(textArea2_1);
 
-    line1.setPosition(70, 270, 100, 50);
-    line1Painter.setColor(touchgfx::Color::getColorFromRGB(32, 252, 8));
-    line1.setPainter(line1Painter);
-    line1.setStart(15, 25);
-    line1.setEnd(85, 25);
-    line1.setLineWidth(10);
-    line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
-    add(line1);
-
     circle1.setPosition(109, 149, 22, 22);
     circle1.setCenter(10, 10);
     circle1.setRadius(10);
@@ -71,6 +62,15 @@ GameScreenViewBase::GameScreenViewBase()
     circle1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     circle1.setPainter(circle1Painter);
     add(circle1);
+
+    line1.setPosition(85, 300, 70, 10);
+    line1Painter.setColor(touchgfx::Color::getColorFromRGB(62, 235, 35));
+    line1.setPainter(line1Painter);
+    line1.setStart(5, 5);
+    line1.setEnd(65, 5);
+    line1.setLineWidth(10);
+    line1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
+    add(line1);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
@@ -81,4 +81,12 @@ GameScreenViewBase::~GameScreenViewBase()
 void GameScreenViewBase::setupScreen()
 {
 
+}
+
+void GameScreenViewBase::handleTickEvent()
+{
+    //Interaction1
+    //When every N tick call virtual function
+    //Call handleTick
+    handleTick();
 }
