@@ -18,7 +18,7 @@ GameScreenViewBase::GameScreenViewBase()
     box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(box1);
 
-    line1_2.setPosition(85, 300, 70, 10);
+    line1_2.setPosition(88, 300, 70, 10);
     line1_2Painter.setColor(touchgfx::Color::getColorFromRGB(62, 235, 35));
     line1_2.setPainter(line1_2Painter);
     line1_2.setStart(5, 5);
@@ -43,27 +43,25 @@ GameScreenViewBase::GameScreenViewBase()
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_T9G1));
     add(textArea1);
 
-    textArea2.setXY(0, 134);
+    textArea2.setPosition(0, 113, 20, 30);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setRotation(touchgfx::TEXT_ROTATE_270);
     Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GZ7K).getText());
     textArea2.setWildcard(textArea2Buffer);
-    textArea2.resizeToCurrentText();
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4WOS));
     add(textArea2);
 
-    textArea2_1.setXY(0, 174);
+    textArea2_1.setPosition(0, 165, 20, 30);
     textArea2_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2_1.setLinespacing(0);
     textArea2_1.setRotation(touchgfx::TEXT_ROTATE_270);
     Unicode::snprintf(textArea2_1Buffer, TEXTAREA2_1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_KHW2).getText());
     textArea2_1.setWildcard(textArea2_1Buffer);
-    textArea2_1.resizeToCurrentText();
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NC1J));
     add(textArea2_1);
 
-    circle1.setPosition(109, 149, 22, 22);
+    circle1.setPosition(110, 150, 20, 20);
     circle1.setCenter(10, 10);
     circle1.setRadius(10);
     circle1.setLineWidth(0);

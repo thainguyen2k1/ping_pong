@@ -1,9 +1,11 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:22:6:virtual void GameScreenView::tearDownScreen()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:26:6:virtual void GameScreenView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:11:13:GameScreenView::~GameScreenView()	8	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:11:13:virtual GameScreenView::~GameScreenView()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	24	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:12:1:GameScreenView::GameScreenView()	8	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:17:6:virtual void GameScreenView::setupScreen()	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:27:6:virtual void GameScreenView::handleTick()	72	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:14:1:GameScreenView::GameScreenView()	8	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:20:6:virtual void GameScreenView::setupScreen()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:169:6:void GameScreenView::updateScoreDisplays1()	16	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:175:6:void GameScreenView::updateScoreDisplays2()	16	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:34:6:virtual void GameScreenView::handleTick()	72	static

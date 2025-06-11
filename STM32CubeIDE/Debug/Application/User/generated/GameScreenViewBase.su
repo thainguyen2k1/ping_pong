@@ -29,13 +29,13 @@
 ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:28:18:virtual void GameScreenViewBase::handleTick()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<GameScreenPresenter>::~View()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:81:6:virtual void GameScreenViewBase::setupScreen()	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:86:6:virtual void GameScreenViewBase::handleTickEvent()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:79:6:virtual void GameScreenViewBase::setupScreen()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:84:6:virtual void GameScreenViewBase::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<GameScreenPresenter>::~View()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:62:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:76:1:GameScreenViewBase::~GameScreenViewBase()	8	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:76:1:virtual GameScreenViewBase::~GameScreenViewBase()	8	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:74:1:GameScreenViewBase::~GameScreenViewBase()	8	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:74:1:virtual GameScreenViewBase::~GameScreenViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
