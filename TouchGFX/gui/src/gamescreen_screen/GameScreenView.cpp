@@ -9,14 +9,18 @@ typedef struct {
     uint16_t x2;
     uint16_t y2;
 } JoystickData;
+
+
 GameScreenView::GameScreenView()
 {
 	tickCount = 0;
+	ballVx = 2.0f, ballVy = 2.0f;
 }
 
 void GameScreenView::setupScreen()
 {
     GameScreenViewBase::setupScreen();
+
 }
 
 void GameScreenView::tearDownScreen()
@@ -24,9 +28,66 @@ void GameScreenView::tearDownScreen()
     GameScreenViewBase::tearDownScreen();
 }
 
+
+
+
 void GameScreenView::handleTick(){
 	GameScreenViewBase::handleTick();
 	JoystickData data;
+
+	ballX = circle1.getX();
+	ballY = circle1.getY();
+
+	ballX += ballVx;
+	ballY += ballVy;
+
+	int currentX1 = line1_1.getX();
+	int currentY1 = line1_1.getY();
+	int currentX2 = line1_2.getX();
+	int currentY2 = line1_2.getY();
+
+	if (ballX + 20 >= currentX1 &&
+	    ballX <= currentX1 + 70 &&
+	    ballY >= currentY1 &&
+	    ballY <= currentY1 + 10)
+	{
+	    ballVy = -ballVy;
+	    ballY = currentY1 + 10;
+	}
+
+	if (ballX + 20 >= currentX2 &&
+	    ballX <= currentX2 + 70 &&
+	    ballY + 20 >= currentY2 &&
+	    ballY + 20 <= currentY2 + 10)
+	{
+	    ballVy = -ballVy;
+	    ballY = currentY2 - 20;
+	}
+
+	if (ballX <= 0) {
+	    ballX = 0;
+	    ballVx = -ballVx;
+	}
+	else if (ballX + 20 >= 240) {
+	    ballX = 240 - 20;
+	    ballVx = -ballVx;
+	}
+
+	if (ballY <= 0) {
+	    ballY = 0;
+	    ballVy = -ballVy;
+	    score2++;
+	    updateScoreDisplays2();
+	}
+	else if (ballY + 20 >= 320) {
+	    ballY = 320 - 20;
+	    ballVy = -ballVy;
+	    score1++;
+	    updateScoreDisplays1();
+	}
+
+	circle1.moveTo((int)ballX, (int)ballY);
+
 
 	if (osMessageQueueGet(joystickQueueHandle, &data, NULL, 0) == osOK)
 	    {
@@ -35,10 +96,7 @@ void GameScreenView::handleTick(){
 	        const float maxSpeed = 3.0f;   // Tốc độ di chuyển tối đa (pixel/tick)
 
 	        // Lấy vị trí hiện tại của line1_1
-	        int currentX1 = line1_1.getX();
-	        int currentY1 = line1_1.getY();
-	        int currentX2 = line1_2.getX();
-	        int currentY2 = line1_2.getY();
+
 
 	        float deltaX1 = 0.0f, deltaX2 = 0.0f;
 
@@ -106,7 +164,16 @@ void GameScreenView::handleTick(){
 	        // Nếu vẫn còn tàn ảnh, thử làm mới toàn bộ màn hình (bỏ comment dòng dưới nếu cần)
 	        // invalidate();
 	    }
+}
 
+void GameScreenView::updateScoreDisplays1() {
+    Unicode::snprintf(scoreBuffer1, 5, "%d", score1);
+    textArea2.setWildcard(scoreBuffer1);
+    textArea2.invalidate();
+}
 
-
+void GameScreenView::updateScoreDisplays2() {
+    Unicode::snprintf(scoreBuffer2, 5, "%d", score2);
+    textArea2_1.setWildcard(scoreBuffer2);
+	textArea2_1.invalidate();
 }

@@ -14,7 +14,7 @@
           {
             "Type": "Line",
             "Name": "line1_2",
-            "X": 85,
+            "X": 88,
             "Y": 300,
             "Width": 70,
             "Height": 10,
@@ -68,9 +68,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "Y": 134,
+            "Y": 113,
             "Width": 20,
-            "Height": 13,
+            "Height": 30,
             "TextId": "__SingleUse_4WOS",
             "TextRotation": "270",
             "Color": {
@@ -78,7 +78,6 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true,
             "Wildcard1": {
               "TextId": "__SingleUse_GZ7K",
               "UseBuffer": true,
@@ -88,9 +87,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea2_1",
-            "Y": 174,
+            "Y": 165,
             "Width": 20,
-            "Height": 13,
+            "Height": 30,
             "TextId": "__SingleUse_NC1J",
             "TextRotation": "270",
             "Color": {
@@ -98,7 +97,6 @@
               "Green": 255,
               "Blue": 255
             },
-            "AutoSize": true,
             "Wildcard1": {
               "TextId": "__SingleUse_KHW2",
               "UseBuffer": true,
@@ -108,10 +106,10 @@
           {
             "Type": "Circle",
             "Name": "circle1",
-            "X": 109,
-            "Y": 149,
-            "Width": 22,
-            "Height": 22,
+            "X": 110,
+            "Y": 150,
+            "Width": 20,
+            "Height": 20,
             "Color": {
               "Red": 255,
               "Green": 255,
