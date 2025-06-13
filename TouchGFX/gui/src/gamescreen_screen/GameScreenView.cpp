@@ -15,6 +15,8 @@ GameScreenView::GameScreenView()
 {
 	tickCount = 0;
 	ballVx = 2.0f, ballVy = 2.0f;
+	score1=0;
+	score2=0;
 }
 
 void GameScreenView::setupScreen()
@@ -167,13 +169,11 @@ void GameScreenView::handleTick(){
 }
 
 void GameScreenView::updateScoreDisplays1() {
-    Unicode::snprintf(scoreBuffer1, 5, "%d", score1);
-    textArea2.setWildcard(scoreBuffer1);
+    Unicode::snprintf(textArea2Buffer,TEXTAREA2_SIZE , "%u", score1);
     textArea2.invalidate();
 }
 
 void GameScreenView::updateScoreDisplays2() {
-    Unicode::snprintf(scoreBuffer2, 5, "%d", score2);
-    textArea2_1.setWildcard(scoreBuffer2);
+    Unicode::snprintf(textArea2_1Buffer, TEXTAREA2_1_SIZE, "%u", score2);
 	textArea2_1.invalidate();
 }

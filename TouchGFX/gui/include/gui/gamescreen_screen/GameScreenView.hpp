@@ -20,11 +20,10 @@ protected:
     float ballX, ballY;
     float ballVx, ballVy;
 
-    Unicode::UnicodeChar scoreBuffer1[5];
-    Unicode::UnicodeChar scoreBuffer2[5];
+   
 
-    int score1 = 0;
-    int score2 = 0;
+    int score1 ;
+    int score2 ;
 };
 
 #endif // GAMESCREENVIEW_HPP
