@@ -56,7 +56,8 @@
             "Y": 156,
             "Width": 20,
             "Height": 9,
-            "TextId": "__SingleUse_T9G1",
+            "LockPosition": true,
+            "TextId": "__SingleUse_WZ8J",
             "TextRotation": "90",
             "Color": {
               "Red": 255,
@@ -71,7 +72,7 @@
             "Y": 113,
             "Width": 20,
             "Height": 30,
-            "TextId": "__SingleUse_4WOS",
+            "TextId": "__SingleUse_OJ6F",
             "TextRotation": "270",
             "Color": {
               "Red": 255,
@@ -79,7 +80,7 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_EJ97",
+              "TextId": "__SingleUse_WWJI",
               "UseBuffer": true,
               "BufferSize": 5
             }
@@ -90,7 +91,7 @@
             "Y": 165,
             "Width": 20,
             "Height": 30,
-            "TextId": "__SingleUse_NC1J",
+            "TextId": "__SingleUse_4WXM",
             "TextRotation": "270",
             "Color": {
               "Red": 255,
@@ -98,7 +99,7 @@
               "Blue": 255
             },
             "Wildcard1": {
-              "TextId": "__SingleUse_UWZF",
+              "TextId": "__SingleUse_D5MS",
               "UseBuffer": true,
               "BufferSize": 5
             }

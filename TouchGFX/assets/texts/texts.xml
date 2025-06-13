@@ -6,20 +6,20 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_EJ97" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_WWJI" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="__SingleUse_UWZF" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_OJ6F" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_D5MS" Alignment="Left" TypographyId="Typography_00">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="__SingleUse_NC1J" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_4WOS" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">&lt;value&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_T9G1" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_WZ8J" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">-</Translation>
+      </Text>
+      <Text Id="__SingleUse_4WXM" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
@@ -27,5 +27,6 @@
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="RTL" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>
