@@ -14,6 +14,7 @@ public:
     void handleTick();
     void updateScoreDisplays1();
     void updateScoreDisplays2();
+    void resetBall();
 
 protected:
     float ballX, ballY;

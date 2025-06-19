@@ -14,26 +14,37 @@ typedef struct {
 
 GameScreenView::GameScreenView()
 {
-    float angle = ((float)rand() / RAND_MAX) * 2.0f * 3.14159265f;
-    float speed = 2.0f; 
-    ballVx = speed * cosf(angle);
-    ballVy = speed * sinf(angle);
     score1 = 0;
     score2 = 0;
     isBallResetting = false;
     resetStartTime = 0;
+    resetBall(); // Khởi tạo bóng với góc ngẫu nhiên
 }
 
 void GameScreenView::setupScreen()
 {
     GameScreenViewBase::setupScreen();
-    // Khởi tạo seed cho rand() bằng tick count
+    // Khởi tạo seed cho rand()
     srand(osKernelGetTickCount());
 }
 
 void GameScreenView::tearDownScreen()
 {
     GameScreenViewBase::tearDownScreen();
+}
+
+void GameScreenView::resetBall()
+{
+    isBallResetting = true;
+    resetStartTime = osKernelGetTickCount();
+    ballX = 120; // Giữa màn hình (240/2)
+    ballY = 160; // Giữa màn hình (320/2)
+    float angle = ((float)rand() / RAND_MAX) * 2.0f * 3.14159265f; // Góc ngẫu nhiên 0-2π
+    float speed = 2.0f; // Tốc độ cố định
+    ballVx = speed * cosf(angle);
+    ballVy = speed * sinf(angle);
+    circle1.moveTo((int)ballX, (int)ballY);
+    circle1.invalidate();
 }
 
 void GameScreenView::handleTick()
@@ -44,15 +55,12 @@ void GameScreenView::handleTick()
     // Kiểm tra trạng thái reset
     if (isBallResetting)
     {
-        // Nếu đã đủ 3 giây (3000 tick với tần suất 1000 Hz)
         if (osKernelGetTickCount() - resetStartTime >= 3000)
         {
-            isBallResetting = false; // Kết thúc reset
-            // Không đặt lại ballVx, ballVy vì đã đặt trong updateScoreDisplays
+            isBallResetting = false;
             circle1.moveTo((int)ballX, (int)ballY);
-            circle1.invalidate(); // Làm mới vị trí bóng
+            circle1.invalidate();
         }
-        // Trong trạng thái reset, bỏ qua cập nhật vị trí bóng
         return;
     }
 
@@ -102,12 +110,14 @@ void GameScreenView::handleTick()
         ballVy = -ballVy;
         score2++;
         updateScoreDisplays2();
+		resetBall();
     }
     else if (ballY + 20 >= 320) {
         ballY = 320 - 20;
         ballVy = -ballVy;
         score1++;
         updateScoreDisplays1();
+		resetBall();
     }
 
     circle1.moveTo((int)ballX, (int)ballY);
@@ -182,36 +192,10 @@ void GameScreenView::updateScoreDisplays1()
 {
     Unicode::snprintf(textArea2Buffer, TEXTAREA2_SIZE, "%u", score1);
     textArea2.invalidate();
-    // Bắt đầu reset bóng
-    isBallResetting = true;
-    resetStartTime = osKernelGetTickCount();
-    // Đặt bóng về giữa màn hình
-    ballX = 120;
-    ballY = 160;
-    // Tạo góc ngẫu nhiên (0 đến 2π)
-    float angle = ((float)rand() / RAND_MAX) * 2.0f * 3.14159265f;
-    float speed = 2.0f; // Tốc độ cố định
-    ballVx = speed * cosf(angle);
-    ballVy = speed * sinf(angle);
-    circle1.moveTo((int)ballX, (int)ballY);
-    circle1.invalidate();
 }
 
 void GameScreenView::updateScoreDisplays2()
 {
     Unicode::snprintf(textArea2_1Buffer, TEXTAREA2_1_SIZE, "%u", score2);
     textArea2_1.invalidate();
-    // Bắt đầu reset bóng
-    isBallResetting = true;
-    resetStartTime = osKernelGetTickCount();
-    // Đặt bóng về giữa màn hình
-    ballX = 120;
-    ballY = 160;
-    // Tạo góc ngẫu nhiên (0 đến 2π)
-    float angle = ((float)rand() / RAND_MAX) * 2.0f * 3.14159265f;
-    float speed = 2.0f; // Tốc độ cố định
-    ballVx = speed * cosf(angle);
-    ballVy = speed * sinf(angle);
-    circle1.moveTo((int)ballX, (int)ballY);
-    circle1.invalidate();
 }
