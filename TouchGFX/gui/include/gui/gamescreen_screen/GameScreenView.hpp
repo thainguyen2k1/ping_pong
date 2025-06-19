@@ -16,14 +16,13 @@ public:
     void updateScoreDisplays2();
 
 protected:
-    uint32_t tickCount;
     float ballX, ballY;
     float ballVx, ballVy;
+    int score1;
+    int score2;
+    bool isBallResetting; // Trạng thái reset bóng
+    uint32_t resetStartTime; // Thời gian bắt đầu reset
 
-   
-
-    int score1 ;
-    int score2 ;
 };
 
 #endif // GAMESCREENVIEW_HPP
