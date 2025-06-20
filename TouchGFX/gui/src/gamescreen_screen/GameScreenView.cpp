@@ -18,14 +18,13 @@ GameScreenView::GameScreenView()
     score2 = 0;
     isBallResetting = false;
     resetStartTime = 0;
-    resetBall(); // Khởi tạo bóng với góc ngẫu nhiên
 }
 
 void GameScreenView::setupScreen()
 {
     GameScreenViewBase::setupScreen();
     // Khởi tạo seed cho rand()
-    srand(osKernelGetTickCount());
+
 }
 
 void GameScreenView::tearDownScreen()
@@ -33,14 +32,41 @@ void GameScreenView::tearDownScreen()
     GameScreenViewBase::tearDownScreen();
 }
 
+void GameScreenView::startBallImmediately()
+{
+    ballX = 120;
+    ballY = 160;
+    float angle = 3.14159265f / 4;
+    float speed = 2.0f;
+    ballVx = speed * cosf(angle);
+    ballVy = speed * sinf(angle);
+    circle1.moveTo((int)ballX, (int)ballY);
+    circle1.invalidate();
+}
+
+
 void GameScreenView::resetBall()
 {
-    isBallResetting = true;
-    resetStartTime = osKernelGetTickCount();
-    ballX = 120; // Giữa màn hình (240/2)
-    ballY = 160; // Giữa màn hình (320/2)
-    float angle = ((float)rand() / RAND_MAX) * 2.0f * 3.14159265f; // Góc ngẫu nhiên 0-2π
-    float speed = 2.0f; // Tốc độ cố định
+	isBallResetting = true;
+	resetStartTime = osKernelGetTickCount();
+	ballX = 120; // Giữa màn hình (240/2)
+	ballY = 160; // Giữa màn hình (320/2)
+	    //3.14159265f / 4.0f((float)rand() / RAND_MAX) * 2.0f * 3.14159265f
+	float angle; // Góc ngẫu nhiên 0-2π
+	if(caseReset == 1){
+		angle = angles[caseReset];
+		caseReset = 2;
+	} else if (caseReset == 2) {
+		angle = angles[caseReset];
+		caseReset = 3;
+	} else if (caseReset == 2) {
+		angle = angles[caseReset];
+		caseReset = 0;
+	} else {
+		angle = angles[caseReset];
+		caseReset = 1;
+	}
+	float speed = 2.0f; // Tốc độ cố định
     ballVx = speed * cosf(angle);
     ballVy = speed * sinf(angle);
     circle1.moveTo((int)ballX, (int)ballY);
@@ -51,6 +77,12 @@ void GameScreenView::handleTick()
 {
     GameScreenViewBase::handleTick();
     JoystickData data;
+
+    if (firstTick)
+    {
+        startBallImmediately(); // không chờ 3 giây
+        firstTick = false;
+    }
 
     // Kiểm tra trạng thái reset
     if (isBallResetting)

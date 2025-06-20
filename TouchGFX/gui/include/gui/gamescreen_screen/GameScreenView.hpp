@@ -15,6 +15,7 @@ public:
     void updateScoreDisplays1();
     void updateScoreDisplays2();
     void resetBall();
+    void startBallImmediately();
 
 protected:
     float ballX, ballY;
@@ -23,6 +24,14 @@ protected:
     int score2;
     bool isBallResetting; // Trạng thái reset bóng
     uint32_t resetStartTime; // Thời gian bắt đầu reset
+    bool firstTick = true;
+    float angles[4] = {
+        3.14159265f / 4,    // 45°
+        -3.14159265f / 4,   // -45°
+        3.14159265f * 3 / 4,   // 135°
+        -3.14159265f * 3 / 4   // -135°
+    };
+    int caseReset = 1;
 
 };
 
