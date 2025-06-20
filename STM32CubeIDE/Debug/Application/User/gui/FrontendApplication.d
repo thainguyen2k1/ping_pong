@@ -40,7 +40,21 @@ Application/User/gui/FrontendApplication.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
- ../../TouchGFX/gui/include/gui/model/Model.hpp
+ ../../TouchGFX/gui/include/gui/model/Model.hpp \
+ ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/overscreen_screen/OverScreenViewBase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
+ ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenPresenter.hpp \
+ ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
@@ -82,3 +96,17 @@ Application/User/gui/FrontendApplication.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp:
 ../../TouchGFX/gui/include/gui/model/Model.hpp:
+../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenView.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/overscreen_screen/OverScreenViewBase.hpp:
+../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
+../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenPresenter.hpp:
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/NoTransition.hpp:

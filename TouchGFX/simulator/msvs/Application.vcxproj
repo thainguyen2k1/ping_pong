@@ -24,6 +24,9 @@
     <ClCompile Include="..\..\generated\gui_generated\src\gamescreen_screen\GameScreenViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp"/>
+    <ClCompile Include="..\..\gui\src\overscreen_screen\OverScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\overscreen_screen\OverScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\overscreen_screen\OverScreenViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -177,6 +180,9 @@
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\overscreen_screen\OverScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\overscreen_screen\OverScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\overscreen_screen\OverScreenViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

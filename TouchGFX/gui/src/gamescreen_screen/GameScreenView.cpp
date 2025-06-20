@@ -32,25 +32,13 @@ void GameScreenView::tearDownScreen()
     GameScreenViewBase::tearDownScreen();
 }
 
-void GameScreenView::startBallImmediately()
-{
-    ballX = 120;
-    ballY = 160;
-    float angle = 3.14159265f / 4;
-    float speed = 2.0f;
-    ballVx = speed * cosf(angle);
-    ballVy = speed * sinf(angle);
-    circle1.moveTo((int)ballX, (int)ballY);
-    circle1.invalidate();
-}
-
 
 void GameScreenView::resetBall()
 {
 	isBallResetting = true;
 	resetStartTime = osKernelGetTickCount();
-	ballX = 120; // Giữa màn hình (240/2)
-	ballY = 160; // Giữa màn hình (320/2)
+	ballX = 110; // Giữa màn hình (240/2)
+	ballY = 150; // Giữa màn hình (320/2)
 	    //3.14159265f / 4.0f((float)rand() / RAND_MAX) * 2.0f * 3.14159265f
 	float angle; // Góc ngẫu nhiên 0-2π
 	if(caseReset == 1){
@@ -80,14 +68,14 @@ void GameScreenView::handleTick()
 
     if (firstTick)
     {
-        startBallImmediately(); // không chờ 3 giây
+    	resetBall(); // không chờ 3 giây
         firstTick = false;
     }
 
     // Kiểm tra trạng thái reset
     if (isBallResetting)
     {
-        if (osKernelGetTickCount() - resetStartTime >= 3000)
+        if (osKernelGetTickCount() - resetStartTime >= 1000)
         {
             isBallResetting = false;
             circle1.moveTo((int)ballX, (int)ballY);
@@ -142,6 +130,10 @@ void GameScreenView::handleTick()
         ballVy = -ballVy;
         score2++;
         updateScoreDisplays2();
+        if (score2 >= 10) {
+        	static_cast<FrontendApplication*>(Application::getInstance())->gotoOverScreenScreenCoverTransitionEast();
+            return;
+        }
 		resetBall();
     }
     else if (ballY + 20 >= 320) {
@@ -149,6 +141,10 @@ void GameScreenView::handleTick()
         ballVy = -ballVy;
         score1++;
         updateScoreDisplays1();
+        if (score1 >= 10) {
+        	static_cast<FrontendApplication*>(Application::getInstance())->gotoOverScreenScreenCoverTransitionEast();
+            return;
+        }
 		resetBall();
     }
 
@@ -165,18 +161,18 @@ void GameScreenView::handleTick()
 
         float normX1 = (float)(data.x1 - xCenter) / (float)(xCenter);
         if (normX1 > deadZone / (float)xCenter) {
-            deltaX1 = (normX1 - deadZone / (float)xCenter) * maxSpeed * 1.5;
+            deltaX1 = (normX1 - deadZone / (float)xCenter) * maxSpeed;
         }
         else if (normX1 < -deadZone / (float)xCenter) {
-            deltaX1 = (normX1 + deadZone / (float)xCenter) * maxSpeed * 1.5;
+            deltaX1 = (normX1 + deadZone / (float)xCenter) * maxSpeed;
         }
 
         float normX2 = (float)(data.x2 - xCenter) / (float)(xCenter);
         if (normX2 > deadZone / (float)xCenter) {
-            deltaX2 = (normX2 - deadZone / (float)xCenter) * maxSpeed * 1.5;
+            deltaX2 = (normX2 - deadZone / (float)xCenter) * maxSpeed;
         }
         else if (normX2 < -deadZone / (float)xCenter) {
-            deltaX2 = (normX2 + deadZone / (float)xCenter) * maxSpeed * 1.5;
+            deltaX2 = (normX2 + deadZone / (float)xCenter) * maxSpeed;
         }
 
         int newX1 = currentX1 + (int)deltaX1;

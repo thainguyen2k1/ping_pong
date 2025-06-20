@@ -11,6 +11,8 @@
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
+#include <gui/overscreen_screen/OverScreenView.hpp>
+#include <gui/overscreen_screen/OverScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -42,4 +44,28 @@ void FrontendApplicationBase::gotoGameScreenScreenNoTransition()
 void FrontendApplicationBase::gotoGameScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoGameScreenScreenCoverTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoGameScreenScreenCoverTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoGameScreenScreenCoverTransitionEastImpl()
+{
+    touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// OverScreen
+
+void FrontendApplicationBase::gotoOverScreenScreenCoverTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoOverScreenScreenCoverTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoOverScreenScreenCoverTransitionEastImpl()
+{
+    touchgfx::makeTransition<OverScreenView, OverScreenPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

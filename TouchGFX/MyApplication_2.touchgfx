@@ -9,7 +9,12 @@
             "Type": "Box",
             "Name": "box1",
             "Width": 240,
-            "Height": 320
+            "Height": 320,
+            "Color": {
+              "Red": 2,
+              "Green": 62,
+              "Blue": 97
+            }
           },
           {
             "Type": "Line",
@@ -51,25 +56,8 @@
           },
           {
             "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 6,
-            "Y": 156,
-            "Width": 20,
-            "Height": 9,
-            "LockPosition": true,
-            "TextId": "__SingleUse_WZ8J",
-            "TextRotation": "90",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
             "Name": "textArea2",
-            "Y": 113,
+            "Y": 110,
             "Width": 20,
             "Height": 30,
             "TextId": "__SingleUse_OJ6F",
@@ -105,6 +93,42 @@
             }
           },
           {
+            "Type": "Line",
+            "Name": "line1",
+            "Y": 158,
+            "Width": 240,
+            "Height": 4,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 235.0,
+            "EndY": 5.0,
+            "LineWidth": 10.0,
+            "LineEndingStyle": "Square"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle2",
+            "X": 116,
+            "Y": 156,
+            "Width": 8,
+            "Height": 8,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "CenterX": 4.0,
+            "CenterY": 4.0,
+            "Radius": 4.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
             "Type": "Circle",
             "Name": "circle1",
             "X": 110,
@@ -113,8 +137,7 @@
             "Height": 20,
             "Color": {
               "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Green": 255
             },
             "CenterX": 10.0,
             "CenterY": 10.0,
@@ -133,6 +156,86 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "handleTick"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerWhen",
+              "ActionCustomTypeName": "Call GameScreen goToOverScreen"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "OverScreen"
+            }
+          }
+        ],
+        "CustomActions": [
+          {
+            "Name": "goToOverScreen",
+            "HasValue": true
+          }
+        ]
+      },
+      {
+        "Name": "OverScreen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 320,
+            "Color": {
+              "Red": 76,
+              "Green": 11,
+              "Blue": 11
+            }
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage1",
+            "Y": -38,
+            "Width": 240,
+            "Height": 262,
+            "Filename": "game over screen pixel.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "Y": 241,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_action.png",
+            "TextId": "__SingleUse_077T",
+            "ReleasedColor": {
+              "Red": 170,
+              "Green": 5,
+              "Blue": 178
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionCover",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "GameScreen"
             }
           }
         ]

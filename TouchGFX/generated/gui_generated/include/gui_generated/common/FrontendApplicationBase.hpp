@@ -23,6 +23,11 @@ public:
     // GameScreen
     void gotoGameScreenScreenNoTransition();
 
+    void gotoGameScreenScreenCoverTransitionEast();
+
+    // OverScreen
+    void gotoOverScreenScreenCoverTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +35,11 @@ protected:
 
     // GameScreen
     void gotoGameScreenScreenNoTransitionImpl();
+
+    void gotoGameScreenScreenCoverTransitionEastImpl();
+
+    // OverScreen
+    void gotoOverScreenScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -7,8 +7,7 @@ C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
 C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:15:1:GameScreenView::GameScreenView()	1
 C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:23:6:virtual void GameScreenView::setupScreen()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:35:6:void GameScreenView::startBallImmediately()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:48:6:void GameScreenView::resetBall()	3
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:223:6:void GameScreenView::updateScoreDisplays1()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:229:6:void GameScreenView::updateScoreDisplays2()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:76:6:virtual void GameScreenView::handleTick()	25
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:36:6:void GameScreenView::resetBall()	3
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:219:6:void GameScreenView::updateScoreDisplays1()	1
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:225:6:void GameScreenView::updateScoreDisplays2()	1
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:64:6:virtual void GameScreenView::handleTick()	27

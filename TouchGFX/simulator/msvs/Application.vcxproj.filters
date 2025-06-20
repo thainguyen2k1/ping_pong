@@ -184,6 +184,18 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>92269FE5-4D44-512B-06B2-4BA4247C6776</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\overscreen_screen">
+      <UniqueIdentifier>ECA94D0C-6984-0585-787B-0189BA3DE714</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\overscreen_screen">
+      <UniqueIdentifier>42306807-A021-F533-5F61-65DF97F87D5F</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\overscreen_screen">
+      <UniqueIdentifier>8B8640A6-8E4D-0CFA-4002-4F01015BFA0A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\overscreen_screen">
+      <UniqueIdentifier>E59BB9DE-FF48-28F1-9DF1-A9A6C3845E18</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -224,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\overscreen_screen\OverScreenPresenter.cpp">
+      <Filter>Source Files\gui\overscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\overscreen_screen\OverScreenView.cpp">
+      <Filter>Source Files\gui\overscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\overscreen_screen\OverScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\overscreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -675,6 +696,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\overscreen_screen\OverScreenPresenter.hpp">
+      <Filter>Header Files\gui\overscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\overscreen_screen\OverScreenView.hpp">
+      <Filter>Header Files\gui\overscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\overscreen_screen\OverScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\overscreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

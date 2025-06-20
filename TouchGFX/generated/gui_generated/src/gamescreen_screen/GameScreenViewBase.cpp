@@ -15,7 +15,7 @@ GameScreenViewBase::GameScreenViewBase()
     add(__background);
 
     box1.setPosition(0, 0, 240, 320);
-    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    box1.setColor(touchgfx::Color::getColorFromRGB(2, 62, 97));
     add(box1);
 
     line1_2.setPosition(88, 300, 70, 10);
@@ -36,14 +36,7 @@ GameScreenViewBase::GameScreenViewBase()
     line1_1.setLineEndingStyle(touchgfx::Line::ROUND_CAP_ENDING);
     add(line1_1);
 
-    textArea1.setXY(6, 156);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea1.setLinespacing(0);
-    textArea1.setRotation(touchgfx::TEXT_ROTATE_90);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WZ8J));
-    add(textArea1);
-
-    textArea2.setPosition(0, 113, 20, 30);
+    textArea2.setPosition(0, 110, 20, 30);
     textArea2.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea2.setLinespacing(0);
     textArea2.setRotation(touchgfx::TEXT_ROTATE_270);
@@ -61,12 +54,30 @@ GameScreenViewBase::GameScreenViewBase()
     textArea2_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4WXM));
     add(textArea2_1);
 
+    line1.setPosition(0, 158, 240, 4);
+    line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    line1.setPainter(line1Painter);
+    line1.setStart(5, 5);
+    line1.setEnd(235, 5);
+    line1.setLineWidth(10);
+    line1.setLineEndingStyle(touchgfx::Line::SQUARE_CAP_ENDING);
+    add(line1);
+
+    circle2.setPosition(116, 156, 8, 8);
+    circle2.setCenter(4, 4);
+    circle2.setRadius(4);
+    circle2.setLineWidth(0);
+    circle2.setArc(0, 360);
+    circle2Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle2.setPainter(circle2Painter);
+    add(circle2);
+
     circle1.setPosition(110, 150, 20, 20);
     circle1.setCenter(10, 10);
     circle1.setRadius(10);
     circle1.setLineWidth(0);
     circle1.setArc(0, 360);
-    circle1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    circle1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 0));
     circle1.setPainter(circle1Painter);
     add(circle1);
 }
@@ -87,4 +98,12 @@ void GameScreenViewBase::handleTickEvent()
     //When every N tick call virtual function
     //Call handleTick
     handleTick();
+}
+
+void GameScreenViewBase::goToOverScreen()
+{
+    //Interaction2
+    //When goToOverScreen is called change screen to OverScreen
+    //Go to OverScreen with screen transition towards East
+    application().gotoOverScreenScreenCoverTransitionEast();
 }

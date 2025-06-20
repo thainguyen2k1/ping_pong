@@ -15,7 +15,7 @@ public:
     void updateScoreDisplays1();
     void updateScoreDisplays2();
     void resetBall();
-    void startBallImmediately();
+    void gotoOverScreen();
 
 protected:
     float ballX, ballY;

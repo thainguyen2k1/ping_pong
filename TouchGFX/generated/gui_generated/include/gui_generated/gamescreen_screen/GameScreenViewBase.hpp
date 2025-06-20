@@ -10,7 +10,6 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/canvas/Line.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 
@@ -21,6 +20,11 @@ public:
     virtual ~GameScreenViewBase();
     virtual void setupScreen();
     virtual void handleTickEvent();
+
+    /*
+     * Custom Actions
+     */
+    virtual void goToOverScreen();
 
     /*
      * Virtual Action Handlers
@@ -44,9 +48,12 @@ protected:
     touchgfx::PainterRGB565 line1_2Painter;
     touchgfx::Line line1_1;
     touchgfx::PainterRGB565 line1_1Painter;
-    touchgfx::TextArea textArea1;
     touchgfx::TextAreaWithOneWildcard textArea2;
     touchgfx::TextAreaWithOneWildcard textArea2_1;
+    touchgfx::Line line1;
+    touchgfx::PainterRGB565 line1Painter;
+    touchgfx::Circle circle2;
+    touchgfx::PainterRGB565 circle2Painter;
     touchgfx::Circle circle1;
     touchgfx::PainterRGB565 circle1Painter;
 
