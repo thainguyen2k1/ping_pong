@@ -246,7 +246,6 @@ int main(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
-  AudioPlayer_PlayPing(); 
   /* Start scheduler */
   osKernelStart();
 
@@ -1163,6 +1162,8 @@ void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
+  AudioPlayer_PlayPing(); 
+
 	JoystickData data;
 	    for(;;)
 	    {
