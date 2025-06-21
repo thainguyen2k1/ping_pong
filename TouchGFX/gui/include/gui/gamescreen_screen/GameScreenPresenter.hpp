@@ -26,6 +26,7 @@ public:
     virtual void deactivate();
 
     virtual ~GameScreenPresenter() {}
+    void onGameOver(uint32_t finalWinner);
 
 private:
     GameScreenPresenter();

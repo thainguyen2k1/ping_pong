@@ -10,6 +10,7 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class OverScreenViewBase : public touchgfx::View<OverScreenPresenter>
 {
@@ -30,6 +31,13 @@ protected:
     touchgfx::Box box1;
     touchgfx::ScalableImage scalableImage1;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::TextAreaWithOneWildcard textArea1;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA1_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
 
 private:
 

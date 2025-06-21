@@ -32,7 +32,7 @@ protected:
         -3.14159265f * 3 / 4   // -135°
     };
     int caseReset = 1;
-
+    uint32_t winner = 0;
 };
 
 #endif // GAMESCREENVIEW_HPP

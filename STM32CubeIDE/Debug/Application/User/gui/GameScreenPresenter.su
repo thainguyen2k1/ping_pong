@@ -1,5 +1,6 @@
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:GameScreenPresenter::~GameScreenPresenter()	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:10:6:virtual void GameScreenPresenter::activate()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:18:6:virtual void GameScreenPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:virtual GameScreenPresenter::~GameScreenPresenter()	8	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:28:13:virtual void* GameScreenPresenter::_ZThn4_N19GameScreenPresenterD1Ev()	0	static
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:4:1:GameScreenPresenter::GameScreenPresenter(GameScreenView&)	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:5:1:GameScreenPresenter::GameScreenPresenter(GameScreenView&)	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp:11:6:void GameScreenPresenter::onGameOver(uint32_t)	8	static

@@ -1,0 +1,5 @@
+../../TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:28:13:StartScreenPresenter::~StartScreenPresenter()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/startscreen_screen/StartScreenPresenter.cpp:10:6:virtual void StartScreenPresenter::activate()	0	static
+../../TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:28:13:virtual StartScreenPresenter::~StartScreenPresenter()	8	static
+../../TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:28:13:virtual void* StartScreenPresenter::_ZThn4_N20StartScreenPresenterD1Ev()	0	static
+C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/startscreen_screen/StartScreenPresenter.cpp:4:1:StartScreenPresenter::StartScreenPresenter(StartScreenView&)	0	static

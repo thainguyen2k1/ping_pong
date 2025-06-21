@@ -26,6 +26,8 @@ public:
     virtual void deactivate();
 
     virtual ~OverScreenPresenter() {}
+    uint32_t getWinner() const;
+
 
 private:
     OverScreenPresenter();

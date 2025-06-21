@@ -144,6 +144,24 @@
             "Radius": 10.0,
             "EndAngle": 360.0,
             "CapPrecision": "Butt"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 205,
+            "Y": 125,
+            "Width": 35,
+            "Height": 35,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "IconReleased": "__generated\\icon_theme_images_action_home_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_done_35_35_E8F6FB.svg.png"
+              }
+            ]
           }
         ],
         "Interactions": [
@@ -169,6 +187,18 @@
               "ScreenTransitionType": "ScreenTransitionCover",
               "ScreenTransitionDirection": "East",
               "ActionComponent": "OverScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionBlock",
+              "ActionComponent": "StartScreen"
             }
           }
         ],
@@ -222,6 +252,26 @@
               "Blue": 255
             },
             "TextRotation": "0"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 77,
+            "Y": 181,
+            "Width": 90,
+            "Height": 21,
+            "TextId": "__SingleUse_SV1E",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 225,
+              "Green": 133,
+              "Blue": 230
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_6BBQ",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
           }
         ],
         "Interactions": [
@@ -239,6 +289,92 @@
             }
           }
         ]
+      },
+      {
+        "Name": "StartScreen",
+        "Components": [
+          {
+            "Type": "TiledImage",
+            "Name": "tiledImage1",
+            "Width": 240,
+            "Height": 320,
+            "FileName": "a silhouette of table tennis2.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Y": 45,
+            "Width": 232,
+            "Height": 96,
+            "TextId": "__SingleUse_Q720",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 237,
+              "Green": 99,
+              "Blue": 19
+            }
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "flexButton1",
+            "X": 80,
+            "Y": 218,
+            "Width": 80,
+            "Height": 50,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 1,
+                "Y": 1,
+                "IconReleased": "__generated\\icon_theme_images_action_label_important_80_50_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_communication_call_made_80_50_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 80,
+                "Height": 50,
+                "LockToFlexButtonSize": true,
+                "BorderSize": 5,
+                "ColorReleased": {
+                  "Red": 194,
+                  "Green": 91,
+                  "Blue": 31
+                },
+                "ColorPressed": {
+                  "Green": 153,
+                  "Blue": 204
+                },
+                "ColorBorderReleased": {
+                  "Red": 255,
+                  "Green": 255,
+                  "Blue": 255
+                },
+                "ColorBorderPressed": {
+                  "Red": 51,
+                  "Green": 102,
+                  "Blue": 153
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "flexButton1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GameScreen"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -248,7 +384,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "GameScreen",
+    "StartupScreenName": "StartScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

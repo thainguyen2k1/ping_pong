@@ -5,6 +5,7 @@
 #include <cmath>   // Để dùng sinf, cosf
 
 extern osMessageQueueId_t joystickQueueHandle;
+extern int winner;
 typedef struct {
     uint16_t x1;
     uint16_t y1;
@@ -18,6 +19,7 @@ GameScreenView::GameScreenView()
     score2 = 0;
     isBallResetting = false;
     resetStartTime = 0;
+    winner = 0;
 }
 
 void GameScreenView::setupScreen()
@@ -131,6 +133,7 @@ void GameScreenView::handleTick()
         score2++;
         updateScoreDisplays2();
         if (score2 >= 10) {
+        	presenter->onGameOver(2);
         	static_cast<FrontendApplication*>(Application::getInstance())->gotoOverScreenScreenCoverTransitionEast();
             return;
         }
@@ -142,6 +145,7 @@ void GameScreenView::handleTick()
         score1++;
         updateScoreDisplays1();
         if (score1 >= 10) {
+        	presenter->onGameOver(1);
         	static_cast<FrontendApplication*>(Application::getInstance())->gotoOverScreenScreenCoverTransitionEast();
             return;
         }

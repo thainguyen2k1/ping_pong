@@ -10,6 +10,7 @@
 
 #include <touchgfx/transitions/NoTransition.hpp>
 #include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/BlockTransition.hpp>
 
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
@@ -18,6 +19,8 @@
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <gui/overscreen_screen/OverScreenView.hpp>
 #include <gui/overscreen_screen/OverScreenPresenter.hpp>
+#include <gui/startscreen_screen/StartScreenView.hpp>
+#include <gui/startscreen_screen/StartScreenPresenter.hpp>
 
 
 /**
@@ -42,7 +45,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< GameScreenView,
             touchgfx::meta::TypeList< OverScreenView,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< StartScreenView,
+            touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -56,7 +60,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< GameScreenPresenter,
             touchgfx::meta::TypeList< OverScreenPresenter,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< StartScreenPresenter,
+            touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**
@@ -70,7 +75,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< CoverTransition<EAST>,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< BlockTransition,
+            touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**
@@ -80,7 +86,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoGameScreenScreenNoTransition();
+        app.gotoStartScreenScreenNoTransition();
     }
 protected:
     FrontendHeapBase(touchgfx::AbstractPartition& presenters, touchgfx::AbstractPartition& views, touchgfx::AbstractPartition& transitions, FrontendApplication& app)

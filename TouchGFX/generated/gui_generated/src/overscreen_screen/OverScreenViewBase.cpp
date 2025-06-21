@@ -29,6 +29,14 @@ OverScreenViewBase::OverScreenViewBase() :
     buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     buttonWithLabel1.setAction(buttonCallback);
     add(buttonWithLabel1);
+
+    textArea1.setPosition(77, 181, 90, 21);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(225, 133, 230));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_6BBQ).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_SV1E));
+    add(textArea1);
 }
 
 OverScreenViewBase::~OverScreenViewBase()
