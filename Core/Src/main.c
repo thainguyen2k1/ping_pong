@@ -21,6 +21,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 #include "app_touchgfx.h"
+#include "audio_player.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -71,6 +72,9 @@ DMA2D_HandleTypeDef hdma2d;
 
 I2C_HandleTypeDef hi2c3;
 
+I2S_HandleTypeDef hi2s3;
+DMA_HandleTypeDef hdma_spi3_tx;
+
 LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
@@ -109,6 +113,7 @@ const osMessageQueueAttr_t joystickQueue_attributes = {
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_CRC_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_SPI5_Init(void);
@@ -117,6 +122,7 @@ static void MX_LTDC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
+static void MX_I2S3_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
 
@@ -188,6 +194,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_CRC_Init();
   MX_I2C3_Init();
   MX_SPI5_Init();
@@ -196,6 +203,7 @@ int main(void)
   MX_DMA2D_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
+  MX_I2S3_Init();
   MX_TouchGFX_Init();
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
@@ -238,7 +246,7 @@ int main(void)
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */
   /* USER CODE END RTOS_EVENTS */
-
+  AudioPlayer_PlayPing(); 
   /* Start scheduler */
   osKernelStart();
 
@@ -246,6 +254,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  
   while (1)
   {
     /* USER CODE END WHILE */
@@ -523,6 +532,40 @@ static void MX_I2C3_Init(void)
 }
 
 /**
+  * @brief I2S3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2S3_Init(void)
+{
+
+  /* USER CODE BEGIN I2S3_Init 0 */
+
+  /* USER CODE END I2S3_Init 0 */
+
+  /* USER CODE BEGIN I2S3_Init 1 */
+
+  /* USER CODE END I2S3_Init 1 */
+  hi2s3.Instance = SPI3;
+  hi2s3.Init.Mode = I2S_MODE_MASTER_TX;
+  hi2s3.Init.Standard = I2S_STANDARD_PHILIPS;
+  hi2s3.Init.DataFormat = I2S_DATAFORMAT_16B;
+  hi2s3.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
+  hi2s3.Init.AudioFreq = I2S_AUDIOFREQ_44K;
+  hi2s3.Init.CPOL = I2S_CPOL_LOW;
+  hi2s3.Init.ClockSource = I2S_CLOCK_PLL;
+  hi2s3.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
+  if (HAL_I2S_Init(&hi2s3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2S3_Init 2 */
+
+  /* USER CODE END I2S3_Init 2 */
+
+}
+
+/**
   * @brief LTDC Initialization Function
   * @param None
   * @retval None
@@ -636,6 +679,22 @@ static void MX_SPI5_Init(void)
     isRevD = 1;
   }
   /* USER CODE END SPI5_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Stream5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream5_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream5_IRQn);
 
 }
 
