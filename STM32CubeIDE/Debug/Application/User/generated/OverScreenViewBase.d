@@ -1,5 +1,5 @@
 Application/User/generated/OverScreenViewBase.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/overscreen_screen/OverScreenViewBase.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/generated/gui_generated/src/overscreen_screen/OverScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/overscreen_screen/OverScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
@@ -53,6 +53,8 @@ Application/User/generated/OverScreenViewBase.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
@@ -109,6 +111,8 @@ Application/User/generated/OverScreenViewBase.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

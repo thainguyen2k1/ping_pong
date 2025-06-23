@@ -23,11 +23,11 @@ struct Typography
 struct TypographyFontIndex
 {
     static const touchgfx::FontId DEFAULT = 0;       // verdana_20_4bpp
-    static const touchgfx::FontId LARGE = 1;         // ROCKBI_TTF_40_4bpp
+    static const touchgfx::FontId LARGE = 1;         // ROCKBI_TTF_35_4bpp
     static const touchgfx::FontId SMALL = 2;         // verdana_10_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_00 = 0; // verdana_20_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_01 = 0; // verdana_20_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 3;
+    static const touchgfx::FontId TYPOGRAPHY_00 = 3; // verdanab_20_4bpp
+    static const touchgfx::FontId TYPOGRAPHY_01 = 4; // verdana_40_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 5;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

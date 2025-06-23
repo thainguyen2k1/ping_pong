@@ -1,5 +1,5 @@
 Application/User/generated/CompressedUnmappedFontCache.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/generated/fonts/src/CompressedUnmappedFontCache.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/generated/fonts/src/CompressedUnmappedFontCache.cpp \
  ../../TouchGFX/generated/fonts/include/fonts/CompressedUnmappedFontCache.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FlashDataReader.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \

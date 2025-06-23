@@ -1,17 +1,18 @@
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:991:13:SPI5_Write	16	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1103:6:StartDefaultTask	16	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:262:6:SystemClock_Config	96	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:166:5:main	120	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:835:6:IOE_Init	0	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:844:6:IOE_ITConfig	0	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:856:6:IOE_Write	32	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:867:9:IOE_Read	32	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:880:10:IOE_ReadMultiple	24	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:889:6:IOE_Delay	0	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1017:6:LCD_IO_Init	8	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1027:6:LCD_IO_WriteData	16	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1043:6:LCD_IO_WriteReg	16	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1062:10:LCD_IO_ReadData	32	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1089:6:LCD_Delay	0	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1139:6:HAL_TIM_PeriodElapsedCallback	0	static
-C:/TouchGFXProjects/ping_pong/Core/Src/main.c:1157:6:Error_Handler	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1066:13:SPI5_Write	16	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1178:6:StartDefaultTask	16	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1213:6:AudioTaskHandle	8	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:287:6:SystemClock_Config	96	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:186:5:main	128	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:910:6:IOE_Init	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:919:6:IOE_ITConfig	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:931:6:IOE_Write	32	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:942:9:IOE_Read	32	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:955:10:IOE_ReadMultiple	24	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:964:6:IOE_Delay	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1092:6:LCD_IO_Init	8	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1102:6:LCD_IO_WriteData	16	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1118:6:LCD_IO_WriteReg	16	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1137:10:LCD_IO_ReadData	32	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1164:6:LCD_Delay	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1235:6:HAL_TIM_PeriodElapsedCallback	0	static
+C:/TouchGFXProjects/ping pong/Core/Src/main.c:1253:6:Error_Handler	0	static

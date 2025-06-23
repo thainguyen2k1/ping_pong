@@ -17,16 +17,21 @@ public:
 
     virtual void changeToStartScreen()
     {
-        gotoGameScreenScreenNoTransition();
+        gotoStartScreenScreenNoTransition();
     }
 
     // GameScreen
-    void gotoGameScreenScreenNoTransition();
-
     void gotoGameScreenScreenCoverTransitionEast();
+
+    void gotoGameScreenScreenNoTransition();
 
     // OverScreen
     void gotoOverScreenScreenCoverTransitionEast();
+
+    // StartScreen
+    void gotoStartScreenScreenNoTransition();
+
+    void gotoStartScreenScreenBlockTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -34,12 +39,17 @@ protected:
     Model& model;
 
     // GameScreen
-    void gotoGameScreenScreenNoTransitionImpl();
-
     void gotoGameScreenScreenCoverTransitionEastImpl();
+
+    void gotoGameScreenScreenNoTransitionImpl();
 
     // OverScreen
     void gotoOverScreenScreenCoverTransitionEastImpl();
+
+    // StartScreen
+    void gotoStartScreenScreenNoTransitionImpl();
+
+    void gotoStartScreenScreenBlockTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

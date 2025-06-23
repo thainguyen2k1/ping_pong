@@ -6,8 +6,16 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_XIX1" Alignment="Center" TypographyId="Default">
-        <Translation Language="GB">Start Game</Translation>
+
+      <Text Id="__SingleUse_6BBQ" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB"></Translation>
+      </Text>
+      <Text Id="__SingleUse_SV1E" Alignment="Center" TypographyId="Typography_00">
+        <Translation Language="GB">P&lt;value&gt; win!</Translation>
+      </Text>
+      <Text Id="__SingleUse_Q720" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB"> PING PONG &#10;BATTLE</Translation>
+
       </Text>
       <Text Id="__SingleUse_077T" Alignment="Center" TypographyId="Large">
         <Translation Language="GB">Play Again</Translation>
@@ -28,9 +36,9 @@
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="ROCKBI.TTF" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="ROCKBI.TTF" Size="35" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="RTL" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="Typography_01" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdanab.ttf" Size="20" Bpp="4" IsVector="no" Direction="RTL" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="Typography_01" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

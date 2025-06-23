@@ -5,8 +5,10 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
+#include <images/BitmapDatabase.hpp>
 
-GameScreenViewBase::GameScreenViewBase()
+GameScreenViewBase::GameScreenViewBase() :
+    flexButtonCallback(this, &GameScreenViewBase::flexButtonCallbackHandler)
 {
     touchgfx::CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
@@ -80,6 +82,12 @@ GameScreenViewBase::GameScreenViewBase()
     circle1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 0));
     circle1.setPainter(circle1Painter);
     add(circle1);
+
+    flexButton1.setIconBitmaps(Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_HOME_35_35_E8F6FB_SVG_ID), Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_DONE_35_35_E8F6FB_SVG_ID));
+    flexButton1.setIconXY(0, 0);
+    flexButton1.setAction(flexButtonCallback);
+    flexButton1.setPosition(205, 125, 35, 35);
+    add(flexButton1);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
@@ -90,6 +98,17 @@ GameScreenViewBase::~GameScreenViewBase()
 void GameScreenViewBase::setupScreen()
 {
 
+}
+
+void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
+{
+    if (&src == &flexButton1)
+    {
+        //Interaction3
+        //When flexButton1 clicked change screen to StartScreen
+        //Go to StartScreen with block transition
+        application().gotoStartScreenScreenBlockTransition();
+    }
 }
 
 void GameScreenViewBase::handleTickEvent()

@@ -95,6 +95,13 @@ const osThreadAttr_t GUI_Task_attributes = {
   .stack_size = 8192 * 4,
   .priority = (osPriority_t) osPriorityNormal,
 };
+/* Definitions for AudioPlay */
+osThreadId_t AudioPlayHandle;
+const osThreadAttr_t AudioPlay_attributes = {
+  .name = "AudioPlay",
+  .stack_size = 128 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
 /* USER CODE BEGIN PV */
 uint8_t isRevD = 0; /* Applicable only for STM32F429I DISCOVERY REVD and above */
 typedef struct {
@@ -108,6 +115,13 @@ osMessageQueueId_t joystickQueueHandle;
 const osMessageQueueAttr_t joystickQueue_attributes = {
     .name = "joystickQueue"
 };
+
+
+const uint16_t pingSound[] = {
+    0xFFFF, 0x0000, 0xFFFF, 0x0000,
+    0xFFFF, 0x0000, 0x0000, 0xFFFF,
+};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -125,6 +139,7 @@ static void MX_ADC2_Init(void);
 static void MX_I2S3_Init(void);
 void StartDefaultTask(void *argument);
 extern void TouchGFX_Task(void *argument);
+void AudioTaskHandle(void *argument);
 
 /* USER CODE BEGIN PFP */
 static void BSP_SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram, FMC_SDRAM_CommandTypeDef *Command);
@@ -238,6 +253,9 @@ int main(void)
 
   /* creation of GUI_Task */
   GUI_TaskHandle = osThreadNew(TouchGFX_Task, NULL, &GUI_Task_attributes);
+
+  /* creation of AudioPlay */
+  AudioPlayHandle = osThreadNew(AudioTaskHandle, NULL, &AudioPlay_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -550,7 +568,9 @@ static void MX_I2S3_Init(void)
   hi2s3.Init.Standard = I2S_STANDARD_PHILIPS;
   hi2s3.Init.DataFormat = I2S_DATAFORMAT_16B;
   hi2s3.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
-  hi2s3.Init.AudioFreq = I2S_AUDIOFREQ_44K;
+
+  hi2s3.Init.AudioFreq = I2S_AUDIOFREQ_8K;
+
   hi2s3.Init.CPOL = I2S_CPOL_LOW;
   hi2s3.Init.ClockSource = I2S_CLOCK_PLL;
   hi2s3.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
@@ -1186,6 +1206,27 @@ void StartDefaultTask(void *argument)
 	        osDelay(50); // delay 50ms
 	    }
   /* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_AudioTaskHandle */
+/**
+* @brief Function implementing the AudioPlay thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_AudioTaskHandle */
+void AudioTaskHandle(void *argument)
+{
+  /* USER CODE BEGIN AudioTaskHandle */
+    HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t *)pingSound, sizeof(pingSound) / sizeof(uint16_t));
+
+  /* Infinite loop */
+  for(;;)
+  {
+      osDelay(1000);
+
+  }
+  /* USER CODE END AudioTaskHandle */
 }
 
 /**

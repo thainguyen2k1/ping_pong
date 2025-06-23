@@ -1,5 +1,5 @@
 Application/User/TouchGFX/target/TouchGFXGPIO.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/target/TouchGFXGPIO.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/target/TouchGFXGPIO.cpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/GPIO.hpp \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f429xx.h \
@@ -33,6 +33,8 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
@@ -74,6 +76,8 @@ Application/User/TouchGFX/target/TouchGFXGPIO.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:

@@ -1,5 +1,5 @@
 Application/User/freertos.o: \
- C:/TouchGFXProjects/ping_pong/Core/Src/freertos.c \
+ C:/TouchGFXProjects/ping\ pong/Core/Src/freertos.c \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../Core/Inc/FreeRTOSConfig.h \
  ../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -42,6 +42,8 @@ Application/User/freertos.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h \
+ ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
@@ -91,6 +93,8 @@ Application/User/freertos.o: \
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fmc.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h:
+../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_ltdc_ex.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:

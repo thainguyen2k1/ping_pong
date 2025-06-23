@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class GameScreenViewBase : public touchgfx::View<GameScreenPresenter>
 {
@@ -56,6 +57,7 @@ protected:
     touchgfx::PainterRGB565 circle2Painter;
     touchgfx::Circle circle1;
     touchgfx::PainterRGB565 circle1Painter;
+    touchgfx::IconButtonStyle< touchgfx::ClickButtonTrigger >  flexButton1;
 
     /*
      * Wildcard Buffers
@@ -72,6 +74,16 @@ private:
      */
     static const uint32_t CANVAS_BUFFER_SIZE = 3600;
     uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
 
 };
 

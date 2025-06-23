@@ -11,7 +11,10 @@ public:
     virtual ~OverScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
+
 protected:
+    void updateWinner();
 };
 
 #endif // OVERSCREENVIEW_HPP
