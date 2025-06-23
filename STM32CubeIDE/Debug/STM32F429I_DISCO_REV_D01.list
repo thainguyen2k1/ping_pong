@@ -11925,9 +11925,9 @@ void GameScreenView::updateScoreDisplays2()
         updateScoreDisplays2();
  8004888:	4628      	mov	r0, r5
  800488a:	f7ff ff05 	bl	8004698 <_ZN14GameScreenView20updateScoreDisplays2Ev>
-        if (score2 >= 1) {
+        if (score2 >= 10) {
  800488e:	f8d4 3220 	ldr.w	r3, [r4, #544]	@ 0x220
- 8004892:	2b00      	cmp	r3, #0
+ 8004892:	2b09      	cmp	r3, #9
  8004894:	dd15      	ble.n	80048c2 <_ZN14GameScreenView10handleTickEv+0x202>
         	presenter->onGameOver(2);
  8004896:	2102      	movs	r1, #2
@@ -12162,9 +12162,9 @@ void GameScreenView::updateScoreDisplays2()
         updateScoreDisplays1();
  8004a7c:	4628      	mov	r0, r5
  8004a7e:	f7ff fdf7 	bl	8004670 <_ZN14GameScreenView20updateScoreDisplays1Ev>
-        if (score1 >= 1) {
+        if (score1 >= 10) {
  8004a82:	f8d4 321c 	ldr.w	r3, [r4, #540]	@ 0x21c
- 8004a86:	2b00      	cmp	r3, #0
+ 8004a86:	2b09      	cmp	r3, #9
  8004a88:	f77f af1b 	ble.w	80048c2 <_ZN14GameScreenView10handleTickEv+0x202>
         	presenter->onGameOver(1);
  8004a8c:	2101      	movs	r1, #1
