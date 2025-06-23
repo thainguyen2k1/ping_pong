@@ -1,5 +1,5 @@
 Application/User/gui/OverScreenPresenter.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp \
  ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/overscreen_screen/OverScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \

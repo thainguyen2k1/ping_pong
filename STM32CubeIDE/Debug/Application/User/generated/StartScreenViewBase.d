@@ -1,5 +1,5 @@
 Application/User/generated/StartScreenViewBase.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/startscreen_screen/StartScreenViewBase.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/generated/gui_generated/src/startscreen_screen/StartScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/startscreen_screen/StartScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

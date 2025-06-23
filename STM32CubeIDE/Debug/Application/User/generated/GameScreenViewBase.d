@@ -1,5 +1,5 @@
 Application/User/generated/GameScreenViewBase.o: \
- C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
+ C:/TouchGFXProjects/ping\ pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \

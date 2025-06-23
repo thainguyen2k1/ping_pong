@@ -36,8 +36,8 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:35:7:touchgfx::ClickButtonTrigger::~ClickButtonTrigger()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:44:7:touchgfx::IconButtonStyle<touchgfx::ClickButtonTrigger>::~IconButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:98:6:virtual void GameScreenViewBase::setupScreen()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:114:6:virtual void GameScreenViewBase::handleTickEvent()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:98:6:virtual void GameScreenViewBase::setupScreen()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:114:6:virtual void GameScreenViewBase::handleTickEvent()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = GameScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = GameScreenViewBase; T1 = const touchgfx::AbstractButtonContainer&]	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:144:18:void touchgfx::IconButtonStyle<T>::handleAlphaUpdated() [with T = touchgfx::ClickButtonTrigger]	1
@@ -49,16 +49,16 @@ C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_sc
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:44:7:virtual touchgfx::IconButtonStyle<touchgfx::ClickButtonTrigger>::~IconButtonStyle()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:357:8:virtual touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButtonContainer&>::~Callback()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:137:18:void touchgfx::IconButtonStyle<T>::handlePressedUpdated() [with T = touchgfx::ClickButtonTrigger]	2
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:93:1:GameScreenViewBase::~GameScreenViewBase()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:93:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:122:6:virtual void GameScreenViewBase::goToOverScreen()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:93:1:GameScreenViewBase::~GameScreenViewBase()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:93:1:virtual GameScreenViewBase::~GameScreenViewBase()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:122:6:virtual void GameScreenViewBase::goToOverScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:43:18:virtual void touchgfx::TextAreaWithWildcardBase::invalidateContent() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	6
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:103:6:void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:103:6:void GameScreenViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:59:18:void touchgfx::IconButtonStyle<T>::setIconBitmaps(const touchgfx::Bitmap&, const touchgfx::Bitmap&) [with T = touchgfx::ClickButtonTrigger]	1
@@ -69,4 +69,4 @@ C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_sc
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:65:5:touchgfx::TextAreaWithOneWildcard::TextAreaWithOneWildcard()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:47:5:touchgfx::IconButtonStyle<T>::IconButtonStyle() [with T = touchgfx::ClickButtonTrigger]	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:248:10:void touchgfx::Line::setLineWidth(T) [with T = int]	2
-C:/TouchGFXProjects/ping_pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:10:1:GameScreenViewBase::GameScreenViewBase()	3
+C:/TouchGFXProjects/ping pong/TouchGFX/generated/gui_generated/src/gamescreen_screen/GameScreenViewBase.cpp:10:1:GameScreenViewBase::GameScreenViewBase()	3

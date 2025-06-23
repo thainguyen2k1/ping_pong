@@ -1,6 +1,6 @@
 ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenPresenter.hpp:28:13:OverScreenPresenter::~OverScreenPresenter()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:16:6:virtual void OverScreenPresenter::activate()	1
+C:/TouchGFXProjects/ping pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:16:6:virtual void OverScreenPresenter::activate()	1
 ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenPresenter.hpp:28:13:virtual OverScreenPresenter::~OverScreenPresenter()	1
 ../../TouchGFX/gui/include/gui/overscreen_screen/OverScreenPresenter.hpp:28:13:virtual void* OverScreenPresenter::_ZThn4_N19OverScreenPresenterD1Ev()	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:5:1:OverScreenPresenter::OverScreenPresenter(OverScreenView&)	1
-C:/TouchGFXProjects/ping_pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:11:10:uint32_t OverScreenPresenter::getWinner() const	1
+C:/TouchGFXProjects/ping pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:5:1:OverScreenPresenter::OverScreenPresenter(OverScreenView&)	1
+C:/TouchGFXProjects/ping pong/TouchGFX/gui/src/overscreen_screen/OverScreenPresenter.cpp:11:10:uint32_t OverScreenPresenter::getWinner() const	1
